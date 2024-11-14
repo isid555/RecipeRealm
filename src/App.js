@@ -3,6 +3,8 @@ import './App.css';
 import Navbar from "./components/NavBar";
 import HomePage from "./components/HomePage";
 import Explore from "./components/Explore";
+import About from "./components/About";
+
 
 
 function App() {
@@ -11,6 +13,8 @@ function App() {
     <Navbar/>
     <HomePage/>
       <Explore/>
+      <About/>
+
     </div>
   );
 }
