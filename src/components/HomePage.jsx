@@ -3,7 +3,7 @@ import img3 from '../assets/img_3.png';
 import img4 from "../assets/img_5.png"
 const HomePage = () => {
     return (
-        <div className="flex h-screen border-8  flex-col lg:flex-row overflow-scroll">
+        <div id={"home"} className="flex h-screen border-8  flex-col lg:flex-row overflow-scroll">
             {/* left wala */}
             <div className="bg-green-900 text-white lg:w-1/2 w-full flex flex-col justify-center px-8 lg-px-12 py-8">
                 <h1 className="lg:text-5xl text-3xl font-bold mb-6 leading-tight">

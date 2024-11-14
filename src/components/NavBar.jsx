@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-scroll';
+
 
 const Navbar = () => {
     // State to handle the mobile menu toggle
@@ -13,18 +15,28 @@ const Navbar = () => {
                         <h1 className="text-2xl font-bold text-green-600">RecipeRealm</h1>
 
                         <div className="hidden md:flex ml-10 space-x-4">
-                            <a href="#" className="text-gray-700 hover:text-green-600">
+                            <a href="" className="text-gray-700 hover:text-green-600">
                                 Home
                             </a>
-                            <a href="#" className="text-gray-700 hover:text-green-600">
+                            <a href="" className="text-gray-700 hover:text-green-600">
                                 Recipes
                             </a>
-                            <a href="#" className="text-gray-700 hover:text-green-600">
+                            <Link
+                                to="about"
+                                smooth={true}
+                                duration={500}
+                                className="text-gray-700 hover:text-green-600 cursor-pointer"
+                            >
                                 About
-                            </a>
-                            <a href="#" className="text-gray-700 hover:text-green-600">
+                            </Link>
+                            <Link
+                                to="contact"
+                                smooth={true}
+                                duration={500}
+                                className="text-gray-700 hover:text-green-600 cursor-pointer"
+                            >
                                 Contact
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
@@ -62,12 +74,26 @@ const Navbar = () => {
                         <a href="#" className="block text-gray-700 hover:text-green-600">
                             Recipes
                         </a>
-                        <a href="#" className="block text-gray-700 hover:text-green-600">
+                        <Link
+                            to="about"
+                            smooth={true}
+                            duration={500}
+                            className="text-gray-700 hover:text-green-600 cursor-pointer block"
+                        >
                             About
-                        </a>
-                        <a href="#" className="block text-gray-700 hover:text-green-600">
+
+
+                        </Link>
+
+                        <Link
+                            to="contact"
+                            smooth={true}
+                            duration={500}
+                            className="text-gray-700 hover:text-green-600 cursor-pointer"
+                        >
+
                             Contact
-                        </a>
+                        </Link>
                     </div>
                 </div>
             )}
