@@ -15,10 +15,14 @@ const Navbar = () => {
                         <h1 className="text-2xl font-bold text-green-600">RecipeRealm</h1>
 
                         <div className="hidden md:flex ml-10 space-x-4">
-                            <a href="" className="text-gray-700 hover:text-green-600">
+                            <a href="" className="text-gray-700 hover:text-green-600 cursor-pointer">
                                 Home
                             </a>
-                            <a href="" className="text-gray-700 hover:text-green-600">
+                            <a  className="text-gray-700 hover:text-green-600 cursor-pointer" onClick={() =>{
+
+                                window.open(`/recipe`, '_blank');
+
+                            }}>
                                 Recipes
                             </a>
                             <Link
@@ -68,17 +72,21 @@ const Navbar = () => {
             {isOpen && (
                 <div className="md:hidden">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                        <a href="#" className="block text-gray-700 hover:text-green-600">
+                        <a href="" className="block text-gray-700 hover:text-green-600 cursor-pointer">
                             Home
                         </a>
-                        <a href="#" className="block text-gray-700 hover:text-green-600">
+                        <a className="block text-gray-700 hover:text-green-600 cursor-pointer" onClick={() =>{
+
+                            window.open(`/recipe`, '_blank');
+
+                        }}>
                             Recipes
                         </a>
                         <Link
                             to="about"
                             smooth={true}
                             duration={500}
-                            className="text-gray-700 hover:text-green-600 cursor-pointer block"
+                            className="text-gray-700 hover:text-green-600 cursor-pointer block "
                         >
                             About
 

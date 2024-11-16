@@ -6,19 +6,19 @@ import Explore from "./components/Explore";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Recipe from "./pages/Recipe";
+import {Route, Routes} from "react-router-dom";
+import Home from "./pages/Home";
 
 
 
 function App() {
   return (
     <div className="App">
-    {/*<Navbar/>*/}
-    {/*<HomePage/>*/}
-    {/*  <Explore/>*/}
-    {/*  <About/>*/}
-    {/*<Footer/>*/}
+<Routes>
+    <Route path={"/"} element={<Home/>}/>
+    <Route path={"/recipe"} element={<Recipe/>}/>
+</Routes>
 
-      <Recipe/>
     </div>
   );
 }

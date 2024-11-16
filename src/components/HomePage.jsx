@@ -13,7 +13,11 @@ const HomePage = () => {
                     Discover 1000+ recipes in your hand with the best recipe. <br/>
                     Help you to find the easiest way to cook.
                 </p>
-                <button className="bg-green-700 hover:bg-green-600 text-white py-3 px-6 rounded-full font-semibold border-2 border-amber-50">
+                <button className="bg-green-700 hover:bg-green-600 text-white py-3 px-6 rounded-full font-semibold border-2 border-amber-50" onClick={() =>{
+
+                        window.open(`/recipe`, '_blank');
+
+                }}>
                     Explore Recipes
                 </button>
             </div>

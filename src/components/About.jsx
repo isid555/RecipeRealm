@@ -27,7 +27,11 @@ const About = () => {
                             with clear instructions and nutritional details.
                         </p>
                         <button
-                            className="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white py-4 px-10 rounded-full font-bold transition-transform transform hover:scale-110 shadow-md">
+                            className="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white py-4 px-10 rounded-full font-bold transition-transform transform hover:scale-110 shadow-md" onClick={() =>{
+
+                            window.open(`/recipe`, '_blank');
+
+                        }}>
                             Discover Our Recipes
                         </button>
                     </div>

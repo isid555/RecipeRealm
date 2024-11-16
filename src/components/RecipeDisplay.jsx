@@ -40,7 +40,7 @@ const RecipeDisplay = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                     {items.contents.map((item) => (
                         <RecipeCard
-                            key={item.id} // Ensure the key is unique for each item
+                           id={item.id} // Ensure the key is unique for each item
                             name={item.title}
                             image={item.image}
                         />
