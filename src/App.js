@@ -8,6 +8,8 @@ import Footer from "./components/Footer";
 import Recipe from "./pages/Recipe";
 import {Route, Routes} from "react-router-dom";
 import Home from "./pages/Home";
+import RecipeDisplay from "./components/RecipeDisplay";
+import RecipeDetail from "./components/RecipeDetail";
 
 
 
@@ -17,7 +19,9 @@ function App() {
 <Routes>
     <Route path={"/"} element={<Home/>}/>
     <Route path={"/recipe"} element={<Recipe/>}/>
+    <Route path={"/recipe/:id"} element={<RecipeDetail/>} />
 </Routes>
+
 
     </div>
   );
