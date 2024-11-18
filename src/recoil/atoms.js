@@ -40,3 +40,38 @@ export const  itemState = atom({
         }
     })
 })
+
+
+
+export const filterState = atom({
+    key: 'filterState',
+    default: {
+        cuisines: [],
+        diets: [],
+        timeRange: {
+            min: 0,
+            max: 120
+        },
+        excludedIngredients: []
+    }
+});
+
+export const cuisinesFilterState = selector({
+    key: 'cuisinesFilterState',
+    get: ({get}) => get(filterState).cuisines
+});
+
+export const dietsFilterState = selector({
+    key: 'dietsFilterState',
+    get: ({get}) => get(filterState).diets
+});
+
+export const timeRangeFilterState = selector({
+    key: 'timeRangeFilterState',
+    get: ({get}) => get(filterState).timeRange
+});
+
+export const excludedIngredientsFilterState = selector({
+    key: 'excludedIngredientsFilterState',
+    get: ({get}) => get(filterState).excludedIngredients
+});
