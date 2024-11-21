@@ -37,6 +37,7 @@ const Input = ({ value, onChange, debounceTime = 900 }) => {
             type="text"
             value={inputValue}
             onChange={handleChange}
+            placeholder={"Search"}
             className="w-full p-3 border-2 border-gray-300 rounded-lg mb-6"
         />
     );
