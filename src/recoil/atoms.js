@@ -1,6 +1,4 @@
-import { atom, selector } from 'recoil';
-import   axios from 'axios';
-import  {API_KEY} from "../utils/constants";
+import {atom, selector} from 'recoil';
 import {fetchRecipes} from "../services/recipeService";
 
 export const searchQueryState = atom({
@@ -20,18 +18,13 @@ export const  itemState = atom({
         key:'itemsSelector',
         get : async ({get}) =>{
            const query = get(searchQueryState);
+            const filters = get(filterState);
            // if(!query){
            //     return [];
            // }
 
             try{
-                const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch` , {
-                    params:{
-                        query,
-                        apiKey : API_KEY
-                    }
-                });
-                return response.data.results;
+                return await fetchRecipes(query, filters);
             }catch (error){
                 console.log('Error fetching recipes',error)
                 throw  error;

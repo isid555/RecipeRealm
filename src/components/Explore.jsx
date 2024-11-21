@@ -4,7 +4,11 @@ import pasta from "../assets/img_7.png"
 import salad from "../assets/img_8.png"
 import taco from "../assets/img_9.png"
 
+
 const Explore = () => {
+
+
+
     return (
         <div className="relative overflow-hidden">
 
@@ -41,35 +45,44 @@ const Explore = () => {
                         <img src= {pasta} alt={"Delicious Pasta"} className="w-full h-56 object-cover " />
                         <div className="p-8">
                             <h2 className="text-xl sm:text-2xl font-bold mb-4 text-gray-800">Delicious Pasta</h2>
-                            <p className="text-gray-600 mb-6">A delightful blend of creamy sauce, tender pasta, and fresh herbs.</p>
-                            <button className="text-green-600 font-semibold hover:text-green-700 transition-colors">
-                                View More Recipes →
-                            </button>
+                            <p className="text-gray-600 mb-6">A delightful blend of creamy sauce, tender pasta, and
+                                fresh herbs.</p>
+                            <a href="/recipe/654944" target="_blank" rel="noopener noreferrer">
+                                <button className="text-green-600 font-semibold hover:text-green-700 transition-colors">
+                                    View More Recipes →
+                                </button>
+                            </a>
+
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 transition-transform transform hover:scale-105">
+                    <div
+                        className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 transition-transform transform hover:scale-105">
                         <img src={salad} alt="Hearty Salad" className="w-full h-56 object-cover " />
                         <div className="p-8">
                             <h2 className="text-xl sm:text-2xl font-bold mb-4 text-gray-800">Hearty Salad</h2>
                             <p className="text-gray-600 mb-6">A refreshing and crunchy mix of vegetables with a tangy dressing.</p>
-                            <button className="text-green-600 font-semibold hover:text-green-700 transition-colors">
-                                View More Recipes →
-                            </button>
+                            <a href="/recipe/157344" target="_blank" rel="noopener noreferrer">
+                                <button className="text-green-600 font-semibold hover:text-green-700 transition-colors">
+                                    View More Recipes →
+                                </button>
+                            </a>
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 transition-transform transform hover:scale-105">
+                    <div
+                        className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 transition-transform transform hover:scale-105">
                         <img src={taco} alt="Spicy Tacos" className="w-full h-56 object-cover " />
                         <div className="p-8">
                             <h2 className="text-xl sm:text-2xl font-bold mb-4 text-gray-800">Spicy Tacos</h2>
                             <p className="text-gray-600 mb-6">A fusion of zesty spices wrapped in a crunchy taco shell.</p>
-                            <button className="text-green-600 font-semibold hover:text-green-700 transition-colors">
-                                View More Recipes →
-                            </button>
+                            <a href="/recipe/658703" target="_blank" rel="noopener noreferrer">
+                                <button className="text-green-600 font-semibold hover:text-green-700 transition-colors">
+                                    View More Recipes →
+                                </button>
+                            </a>
                         </div>
                     </div>
-
 
 
                 </div>

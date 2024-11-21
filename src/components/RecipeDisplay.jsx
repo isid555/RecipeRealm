@@ -6,6 +6,7 @@ import RecipeCard from "./RecipeCard";
 import RecipeFilters from "./RecipeFilters";
 import Loader from "./Loader";
 import { X } from 'lucide-react';
+import Input from "./Input";
 
 const RecipeDisplay = () => {
     const {
@@ -24,7 +25,7 @@ const RecipeDisplay = () => {
         if (items.state === 'loading') return <Loader />;
         if (items.state === 'hasError') return <div>Error loading recipes</div>;
         if (items.state === 'hasValue' && items.contents.length === 0) {
-            return <div>No recipes found</div>;
+            return <div><h1>No recipes found</h1></div>;
         }
         if (items.state === 'hasValue') {
             return (
@@ -37,7 +38,9 @@ const RecipeDisplay = () => {
         }
         return null;
     };
-
+    const handleQueryChange = (value) => {
+        setQuery(value); // Update the query with the debounced value
+    };
     return (
         <div className="max-w-7xl mx-auto p-4">
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -45,13 +48,8 @@ const RecipeDisplay = () => {
                     <RecipeFilters onFilterChange={handleFilterChange} currentFilters={filters} />
                 </div>
                 <div className="lg:col-span-3">
-                    <input
-                        type="text"
-                        value={query}
-                        onChange={(e) => setQuery(e.target.value)}
-                        placeholder="Search for recipes..."
-                        className="w-full p-3 border-2 border-gray-300 rounded-lg mb-6"
-                    />
+
+                    <Input value={query} onChange={handleQueryChange} debounceTime={250} />
 
                     {hasActiveFilters() && (
                         <div className="mb-6">

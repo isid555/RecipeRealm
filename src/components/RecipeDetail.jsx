@@ -3,6 +3,7 @@ import { Clock, Users, Heart, DollarSign, Circle } from 'lucide-react';
 import axios from 'axios';
 import { API_KEY } from "../utils/constants";
 import { useParams } from "react-router-dom";
+import Loader from "./Loader";
 
 const RecipeDetail = () => {
     const { id } = useParams();
@@ -35,7 +36,7 @@ const RecipeDetail = () => {
     if (loading) {
         return (
             <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-                <div className="text-green-800 text-xl">Loading recipe...</div>
+                <div className="text-green-800 text-xl"><Loader/></div>
             </div>
         );
     }

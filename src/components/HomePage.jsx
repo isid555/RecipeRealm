@@ -1,6 +1,8 @@
 import React from 'react';
 import img3 from '../assets/img_3.png';
 import img4 from "../assets/img_5.png"
+import img10 from "../assets/img_10.png"
+import img11 from "../assets/img_11.png"
 const HomePage = () => {
     return (
         <div id={"home"} className="flex h-screen border-8  flex-col lg:flex-row overflow-scroll">
@@ -34,7 +36,7 @@ const HomePage = () => {
                         <div className="flex items-center space-x-4">
                             <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-green-600">
                                 <img
-                                    src="https://cdn.123telugu.com/content/wp-content/uploads/2023/10/LEO-19.jpg"
+                                    src={img10}
                                     alt="Parthiban"
                                     className="w-full h-full object-cover"
                                 />
@@ -58,7 +60,7 @@ const HomePage = () => {
                         <div className="flex items-center space-x-4">
                             <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-green-600">
                                 <img
-                                    src="https://static.india.com/wp-content/uploads/2023/10/Leo-Movie-Review-Thalapathy-Vijay-Chalks-Up-a-Career-High-With-Lokesh-Kanagaraj-Film.jpg?impolicy=Medium_Resize&w=1200&h=800"
+                                    src={img11}
                                     alt="Leo Das"
                                     className="w-full h-full object-cover"
                                 />

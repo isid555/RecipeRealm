@@ -3,10 +3,9 @@ import React from 'react';
 const Loader = () => {
     return (
         <div className="flex justify-center items-center min-h-screen bg-white">
-            <div className="flex space-x-2">
-                <div className="w-4 h-4 bg-green-600 rounded-full animate-bounce"></div>
-                <div className="w-4 h-4 bg-green-600 rounded-full animate-bounce delay-150"></div>
-                <div className="w-4 h-4 bg-green-600 rounded-full animate-bounce delay-300"></div>
+            <div className="relative w-16 h-16">
+                <div className="absolute inset-0 border-4 border-green-200 rounded-full"></div>
+                <div className="absolute inset-0 border-4 border-transparent border-t-green-600 rounded-full animate-spin"></div>
             </div>
         </div>
     );
